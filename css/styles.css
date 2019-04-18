@@ -1,0 +1,178 @@
+body{
+  font: 20px "Montserrat", sans-serif;
+  line-height: 1.8;
+  color: #f5f6f7;
+  overflow-x: hidden;
+
+  height: 100%;
+background-repeat: no-repeat;
+
+
+
+}
+/*
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+*/
+.navbar-default .navbar-nav>li.active>a {
+  background-color: transparent;
+  color: #55acee;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li.active>a:hover {
+  color: #55acee;
+  background-color: transparent;
+}
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+
+}
+.bg{
+background-image: url(img/profile1.jpg);
+height: 100%;
+  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+p {font-size: 16px;}
+
+.margin {
+  margin-bottom: 45px;
+}
+
+.dock{position: fixed;
+top: 93%;
+display: inline;
+z-index: 10;}
+}
+.bg-1 {
+  color: #ffffff;
+}
+.bg-2 {
+  background-color: #474e5d;
+  /* Dark Blue */
+
+  color: #ffffff;
+}
+.bg-3 {
+  background-color: #ffffff;
+  /* White */
+
+  color: #555555;
+}
+.bg-4 {
+  background-color: #2f2f2f;
+  color: #ffffff;
+}
+h2 span {
+  color:#339BEA !important;
+}
+
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+#who {
+  padding-top: 120px;
+  background-image: url(../img/bg2-who.jpg);
+
+  /* pharallax effect must be canceled on mobile devices by adding a media query
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+*/
+}
+#who h2 {
+  font-size: 50px;
+  font-family: 'Srisakdi', cursive;
+  font-family: 'Oswald', sans-serif;
+}
+#skills {
+  background-color: #F8F8F8;
+  text-align: center;
+
+  color: #7B7B7B;
+  font-weight: bold;
+
+
+}
+
+#skills p{  padding:0 2; margin-bottom: 3%;}
+#skills h2 {
+  margin: 0 auto 40px;
+  color: #474e5d;
+
+}
+#skills img {
+
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  max-height: 180px;
+}
+
+
+#skills h3{color: grey;
+font-family:sans-serif;
+font-size: 0.7em;}
+
+
+#find-me {
+color:grey;
+}
+#find-me h2 {
+  margin:0 auto 40px;
+  padding-top: 10px;
+  text-align: center;
+font-weight: bold;
+  color: #474e5d;
+
+}
+#find-me label{font-size: 0.8em;}
+
+.glyphicon{margin-right: 15px;}
+.social-icon{font-size:2em;color:#337AB7;}
+
+.greybackground{background-color: #F2F2F2;}
+
+ul{
+  text-align: center;
+}
+ul li{
+  list-style: none;
+  margin:10px 20px 0 0;
+  display: inline-block;
+}
+
+
+/* #skills:hover img {
+  animation: bang 1s ease;
+}
+@keyframes bang {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+*/

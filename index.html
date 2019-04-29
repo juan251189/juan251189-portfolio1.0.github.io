@@ -61,12 +61,12 @@
   <div class="container-fluid text-center bg-1 bg" id="who">
     <div id="who-content">
 
-  <div class="animated bounceInUp">
+  <div class="animated bounceInDown slow">
 
- <h2>Juan David Gomez </h2>  </div>
+ <h2>Juan David Gomez</h2>  </div>
       <br>
       <img src="img/profile1.jpg" alt="juan" class="img-circle">
-    <div class="animated bounceInUp delay-1s">
+    <div class="animated bounceInUp delay-1s slow">
         <h2>Junior <span>Front-End Developer</span></h2>
           </div>
     </div>
@@ -208,6 +208,22 @@
           });
         } // End if
       });
+
+
+// in animations while scrolling
+      $(window).load(function () {
+          var in_view = new Waypoint.Inview({
+              element: $('#skills')[0],
+              enter: function() {
+                  $('#skills').addClass('animated','bounceInDown');
+              },
+              exit: function() {  // optionally
+                  $('#skills').removeClass('start');
+              }
+          });
+      });
+
+
     });
 
 

@@ -8,10 +8,17 @@ body{
   overflow-x: hidden;
 
   height: 100%;
-background-repeat: no-repeat;
 
 
 
+
+}
+
+
+.post {
+    padding: 12px;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 /*
 .row-eq-height {
@@ -90,6 +97,13 @@ h2 span {
 #who {
   padding-top: 120px;
   background-image: url(../img/bg2-who.jpg);
+  min-height: 600px;
+  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+overflow: hidden;
+
+
 
   /* pharallax effect must be canceled on mobile devices by adding a media query
 background-attachment: fixed;
@@ -112,10 +126,10 @@ background-repeat: no-repeat;
 
 }
 
-#skills p{  padding:0 2; margin-bottom: 3%;}
+#skills p{  padding:0 9px; margin-bottom: 5%; color:rgb(117, 121, 128);font-size: 0.8em;}
 #skills h2 {
   margin: 0 auto 40px;
-  color: #474e5d;
+  color:rgb(99, 100, 100);
 
 }
 #skills img {
@@ -134,33 +148,40 @@ font-family:sans-serif;
 font-size: 0.7em;}
 
 
+
+#find-me label{font-size: 0.8em;}
+
+
+.glyphicon{margin-right: 5px;}
+.social-icon{font-size:2em;color:#337AB7;}
+
+.greybackground{background-color: #F2F2F2;}
+
+
 #find-me {
 color:grey;
 }
 #find-me h2 {
   margin:0 auto 40px;
-  padding-top: 10px;
+  padding-top: 90px;
   text-align: center;
 font-weight: bold;
   color: #474e5d;
 
 }
-#find-me label{font-size: 0.8em;}
-
-.glyphicon{margin-right: 15px;}
-.social-icon{font-size:2em;color:#337AB7;}
-
-.greybackground{background-color: #F2F2F2;}
 
 ul{
   text-align: center;
+  padding-left: 0;
 }
 ul li{
   list-style: none;
-  margin:10px 20px 0 0;
+margin-right: 10px;
+
   display: inline-block;
 }
 
+.error{color :red; font-size: 0.7em}
 
 /* #skills:hover img {
   animation: bang 1s ease;

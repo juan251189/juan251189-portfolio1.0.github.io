@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content='initial-scale=1, viewport-fit=cover' >
   <title>Juan D CV</title>
 
 
@@ -61,11 +62,11 @@
   <div class="container-fluid text-center bg-1 bg" id="who">
     <div id="who-content">
 
-  <div class="animated bounceInDown slow">
 
- <h2>Juan David Gomez</h2>  </div>
+
+ <h2>Juan David Gomez</h2>
       <br>
-      <img src="img/profile1.jpg" alt="juan" class="img-circle">
+      <img src="img/profile1.jpg" alt="juan" class="img-circle animated zoomIn slow">
     <div class="animated bounceInUp delay-1s slow">
         <h2>Junior <span>Front-End Developer</span></h2>
           </div>
@@ -83,10 +84,9 @@
   <div class="container-fluid text-center  " id="skills">
 
     <div class="row">
-      <h2><strong>CURRENT SKILLS</strong> </h2>
+      <h2><strong>Skills</strong> </h2>
       <p >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A repellendus ratione, quo expedita doloribus dolorum asperiores doloremque quibusdam quia neque accusamus veniam, quas molestiae consequuntur nesciunt hic maiores. Iure, beatae.
-      </p>
+ These are Current technical skills gained from my bachelor degree, Diplomas and courses from Udemy, Freecodecamp and w3school.      </p>
       <div class="col-md-2 col-xs-4 col-sm-4 ">
         <h3>HTML</h3><img src="img/html.png" class="img-responsive skill-img" style="width:auto 100%;">
       </div>
@@ -112,67 +112,124 @@
 
 
   <!-- FIND ME SECTION -->
-
-  <div class="container-fluid" id="find-me">
-    <h2>GET IN TOUCH</h2>
-    <div class="row ">
-
-      <div class="col-sm-6 col-xs-12 ">
-
-        <form action="/action_page.php" class="form-horizontal">
-
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="name">Name</label>
-            <div class="col-sm-10">
-              <input type="text" for="name" class="form-control greybackground" id="name" placeholder="Type your name">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Email</label>
-            <div class="col-sm-10">
-              <input type="email" name="email" class="form-control greybackground" id="email" placeholder="Enter email:">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label col-sm-2" for="message" >Message</label>
-            <div class="col-sm-10">
-              <textarea class="form-control greybackground" rows="5" id="message"></textarea>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-3">
-              <input type="button" class="btn btn-primary form-control" value="submit">
-
-            </div>
-          </div>
+<!-- add this code to input tag for getting an alert mesasage automaticly with
+out
+php required="required" data-error="Please specify your need."
+and add a div after the input like this
+  <div class="help-block with-errors"></div>
+-->
 
 
+<!-- SECOND FORM -->
+<section id="find-me">
 
-        </form>
-      </div>
-      <div class="col-sm-6 col-xs-12">
+<div class="container">
+<h2>Contact Me </h2>
+
+<div class="row">
+  <div class="col-md-6">
+
+<?php include('contact.php'); ?>
+<form id="contact-form" method="post" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" role="form" style="color:rgb(77, 77, 77);">
+
+    <div class="messages"></div>
+
+    <div class="controls">
 
         <div class="row">
-          <div class="col-sm-8 col-sm-offset-2" style="text-align:center">
-            <p>
-              <a href=""><span class="glyphicon glyphicon-earphone"></span></a>+0406829636</p>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="name" class="form-control greybackground" placeholder="Please enter your firstname *" value="<?= $name ?>"  >
+                    <span class="error"> <?= $name_error ?> </span>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="lastname" class="form-control greybackground" placeholder="Please enter your lastname *"  value="<?= $lastname ?>" >
+                    <span class="error"> <?= $lastname_error?> </span>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control greybackground" placeholder="Please enter your email *" value="<?= $email ?>"  >
+                    <span class="error"> <?= $email_error ?> </span>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_need">Please specify your need *</label>
+                    <select id="form_need" name="need" class="form-control greybackground" >
+                        <option value=""></option>
+                        <option value="Request quotation">Request quotation</option>
+                        <option value="Request order status">Request order status</option>
+                        <option value="Request copy of an invoice">Request copy of an invoice</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group ">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control greybackground" placeholder="Message for me *" rows="4" value= "<?= $message ?>"></textarea>
+                    <span class="error"> <?= $message_error ?> </span>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-primary btn-send " value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" >
+                <p class="text-muted">
+                    <strong>*</strong> These fields are required.
+                  </p>
+            </div>
+        </div>
+    </div>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <div class="row">
+          <div class="col-sm-12" style="text-align:center ">
+            <p style="color:grey; text-center">Sydney Australia</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12" style="text-align:center ">
+            <p style="color:grey;">
+              <a href=""><span class="glyphicon glyphicon-earphone"></span></a>+040682963.</p>
           </div>
         </div>
 
 
-
+ <div class="col-xs-12">
         <ul>
         <a href="https://www.linkedin.com/in/juan-david-restrepo-84496474/"> <li><div class="fa fa-linkedin-square social-icon"></div></li></a>
         <a href="https://github.com/juan251189"><li><div class="fa fa-github-square social-icon"></div></li></a>
         </ul>
 
       </div>
+      </div>
+</form>
+</div>
+</div>
+</section>
 
-    </div>
 
-  </div>
-  </div>
+
+
 
 
   <footer class="container-fluid bg-4 text-center">
@@ -201,7 +258,7 @@
           // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
           $('html, body').animate({
             scrollTop: $(hash).offset().top
-          }, 800, function() {
+          }, 700, function() {
 
             // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
@@ -212,6 +269,8 @@
 
 // in animations while scrolling
       $(window).load(function () {
+
+
           var in_view = new Waypoint.Inview({
               element: $('#skills')[0],
               enter: function() {
